@@ -1,8 +1,10 @@
 import java.util.Arrays;
+import java.util.HashMap;
 
 import algorithms.search.BFS;
 import algorithms.sort.BubbleSort;
 import algorithms.sort.QuickSort;
+import problems.ParenthesisMatcher;
 
 public class Main {
     public static void main(String[] arg){
@@ -40,18 +42,27 @@ public class Main {
 
 //        System.out.println("Merge sort : " + Arrays.toString(BubbleSort.sort(array3)));
 
-        int[][]graph = {
-                {1},
-                {0, 4, 5},
-                {3, 4, 5},
-                {2, 6},
-                {1, 2},
-                {1, 2, 6},
-                {3, 5},
-                {}
-        };
+//        int[][]graph = {
+//                {1},
+//                {0, 4, 5},
+//                {3, 4, 5},
+//                {2, 6},
+//                {1, 2},
+//                {1, 2, 6},
+//                {3, 5},
+//                {}
+//        };
+//
+//        BFS.search(graph, 3);
 
-        BFS.search(graph, 3);
+        // Parenthesis match
+        HashMap<Character, Character> parenthesisMap = new HashMap<Character, Character>() {{
+            put('{','}');
+            put('[',']');
+            put('(',')');
+        }};
+        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap
+
     }
 
 
