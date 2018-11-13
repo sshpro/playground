@@ -61,7 +61,7 @@ public class Main {
             put('[',']');
             put('(',')');
         }};
-        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap
+        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap));
 
     }
 
