@@ -5,6 +5,7 @@ import algorithms.search.BFS;
 import algorithms.sort.BubbleSort;
 import algorithms.sort.QuickSort;
 import problems.ParenthesisMatcher;
+import problems.RemoveRecurringChars;
 
 public class Main {
     public static void main(String[] arg){
@@ -56,13 +57,16 @@ public class Main {
 //        BFS.search(graph, 3);
 
         // Parenthesis match
-        HashMap<Character, Character> parenthesisMap = new HashMap<Character, Character>() {{
-            put('{','}');
-            put('[',']');
-            put('(',')');
-        }};
-        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap));
-
+//        HashMap<Character, Character> parenthesisMap = new HashMap<Character, Character>() {{
+//            put('{','}');
+//            put('[',']');
+//            put('(',')');
+//        }};
+//        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap));
+        String str = "abccccbba";
+        char[] chars = str.toCharArray();
+        int len = RemoveRecurringChars.removeRecursively(chars, chars.length);
+        System.out.print(new String(chars, 0, len));
     }
 
 
