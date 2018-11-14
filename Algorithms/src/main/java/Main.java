@@ -63,9 +63,9 @@ public class Main {
 //            put('(',')');
 //        }};
 //        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap));
-        String str = "";
+        String str = "aaabbbdd";
         char[] chars = str.toCharArray();
-        int len = RemoveRecurringChars.removeRepeatingCharsRecursively(null, chars.length, 3);
+        int len = RemoveRecurringChars.removeRepeatingCharsRecursively(str.toCharArray(), chars.length, 3);
         System.out.print(new String(chars, 0, len));
     }
 
