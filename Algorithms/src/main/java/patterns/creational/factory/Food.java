@@ -1,8 +1,8 @@
 package patterns.creational.factory;
 
-public class Pizza {
+public abstract class Food implements IFood {
     String[] mIngredients;
-   public Pizza(String[] ingredients){
+   public Food(String[] ingredients){
         mIngredients = ingredients;
     }
 }
