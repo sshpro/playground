@@ -1,5 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 import algorithms.search.BFS;
 import algorithms.sort.BubbleSort;
@@ -63,10 +66,24 @@ public class Main {
 //            put('(',')');
 //        }};
 //        System.out.println("Parenthesis matched: " + ParenthesisMatcher.matched("(abc[{0 * 12]lxm)", parenthesisMap));
-        String str = "aaabbbdd";
-        char[] chars = str.toCharArray();
-        int len = RemoveRecurringChars.removeRepeatingCharsRecursively(str.toCharArray(), chars.length, 3);
-        System.out.print(new String(chars, 0, len));
+//        String str = "aaabbbdd";
+//        char[] chars = str.toCharArray();
+//        int len = RemoveRecurringChars.removeRepeatingCharsRecursively(str.toCharArray(), chars.length, 3);
+        ArrayList<Character> list = new ArrayList<Character>() {{
+            add('a');
+            add('a');
+            add('a');
+            add('c');
+            add('b');
+            add('b');
+            add('b');
+            add('c');
+            add('c');
+            add('e');
+        }};
+
+        RemoveRecurringChars.removeRepeatingCharacterRecursively(list, 3);
+        System.out.print(Arrays.toString(list.toArray()));
     }
 
 
