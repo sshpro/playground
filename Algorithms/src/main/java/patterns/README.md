@@ -16,25 +16,25 @@ use these 3 thread executor which are singleton and can be accessed throught the
 without having to specify the exact class of the object that will be created
 * This is done by creating objects by calling factory method - either specified in an interface and implemented by child classes,
 or implemented in a base class and optionally overridden by derived classes instead of calling constructor
-* In this example createFood on TakeAway is abstract method which is implemented by child classes.
+* In this example createFood on ```TakeAway``` is abstract method which is implemented by child classes.
 * Problem this pattern is trying to solve is, if you have multiple types food created by multiple takeaways let them handle the creation
 
 
 ### Abstract Factory
-In this ex: lets assume that London has IndianFood TakeAway, ChineseFood TakeAway and Italian Food TakeAway
+In this ex: lets assume that London has ```IndianTakeAway```, ```ChineseTakeAway``` and ```ItalianTakeAway```
 
-Lets say as good will on August 15th(Indian Independence day) all Food TakeAways in London sell Indian Food
-i.e Indian Food TakeAway, Italian Food TakeAway and Chinese one.
-Does ChineseFoodTakeAway need to create IndianFoodFactory for one day ? think about it
+Lets say as good will on August 15th(Indian Independence day) all TakeAways in London sell Indian Food
+
+Does ```ChineseTakeAway``` need to create ```IndianFoodFactory``` for one day ? think about it
 
 This is where Abstract factory pattern will come into picture, lets modify Food TakeAways to be abstract
 
 Don't get confused with TakeAway and Factory in the example.
 
-So in this case FoodTakeAway (from factory method pattern ) is modified to "have" abstract factory is now called "FoodTakeAwayWithAbstractFactory"
+So in this case FoodTakeAway (from factory method pattern ) is modified to "have" abstract factory is now called ```TakeAwayWithAbstractFactory```
 
-Note that in example ChineseFoodTakeAway which is now ChineseFoodTakeAwayWithAbstractFactory has two constructor
-one default constructor which actually by default creates ChineseFoodFactory however if you notice the super class constructor
-ChineseFoodTakeAwayWithAbstractFactory can accept any factory . this is where ChineseTakeAway can pass IndianFoodFactory on Independence day :)
+Note that in example ```ChineseTakeAway``` which is now ```ChineseTakeAwayWithAbstractFactory``` has two constructor
+one default constructor which actually by default creates ```ChineseFoodFactory``` however if you notice the super class constructor
+```ChineseTakeAwayWithAbstractFactory``` can accept any factory . this is where ```ChineseTakeAway``` can pass ```IndianFactory``` on Independence day :)
 
 This allows further abstracting creating objects, and is promoting "open/close" solid principle.
