@@ -12,6 +12,12 @@ In this example ```AppExecutors``` is singleton, which gives access to three thr
 in this particular example MainThread, I/O thread and Network thread, anything you do in your app relating to these things you 
 use these 3 thread executor which are singleton and can be accessed throught the app.
 
+### Builder
+ * This pattern used to create object from bunch of other complex objects
+ * Hide the creation of objects from client & same time the target object as well 
+ * Example are when you want to add more configuration 
+ * In this project I use simple ```Builder``` to buid ```Notification``` which is made up of more complex objects ```Title```, ```Message```, ```Contact```, and ```Attachments``` etc. Here once the food is ready automated notification is sent based on different configuration client wanted whether they want an email or sms or phone call.
+
 ### Factory Method
 * Factory method pattern uses factory methods to deal with the problem of creating objects
 without having to specify the exact class of the object that will be created
