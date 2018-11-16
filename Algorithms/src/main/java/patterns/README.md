@@ -7,6 +7,7 @@
 ## Creational
 ### Singleton
 Restricts instantiation of class to one instance & provides global access to that instance
+
 In this example ```AppExecutors``` is singleton, which gives access to three thread executor for different purpose 
 in this particular example MainThread, I/O thread and Network thread, anything you do in your app relating to these things you 
 use these 3 thread executor which are singleton and can be accessed throught the app.
