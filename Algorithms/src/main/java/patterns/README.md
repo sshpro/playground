@@ -45,3 +45,10 @@ one default constructor which actually by default creates ```ChineseFoodFactory`
 ```ChineseTakeAwayWithAbstractFactory``` can accept any factory . this is where ```ChineseTakeAway``` can pass ```IndianFactory``` on Independence day :)
 
 This allows further abstracting creating objects, and is promoting "open/close" solid principle.
+
+## Behavioural
+### Command
+  Definition : Encapsulates a request(command), there by letting you parameterise the other objects with these commands, 
+  commands have execute method and an optional unExecute method as well
+  In the example here, Invoker i.e ```TVRemote``` sends the command to receiver i.e ```TV```
+   
