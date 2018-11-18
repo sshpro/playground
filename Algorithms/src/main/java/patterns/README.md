@@ -51,4 +51,14 @@ This allows further abstracting creating objects, and is promoting "open/close" 
   Definition : Encapsulates a request(command), there by letting you parameterise the other objects with these commands, 
   commands have execute method and an optional unExecute method as well
   In the example here, Invoker i.e ```TVRemote``` sends the command to receiver i.e ```TV```
-   
+  
+![command_pattern](https://user-images.githubusercontent.com/16775510/48675628-26c41e00-eb53-11e8-98f5-80f18fef5bfb.jpeg)
+ 
+  ### Observer
+  Problem: Imagine an object changes its state ex: WeatheService, & another object for ex: WeatherBoard wants to know the status of weather from WeatherService. Here WeatherServer is observable or Publisher, and WeatherBoard is observer or subscriber. Observable has 0 or many Observers, and whenever the there is change of state Observer is notified. So in order to get updated on status of Observable, Observer needs to subscribe. 
+  This efficient than periodic polling, as Publisher is better aware of state, so when it changes state it notifies all its observes(subscribers)
+  In this example ```WeatherService``` is publisher, or observable. ```WeatherBoard``` is subscriber or observer. It is also important to notice that ```WeatherService``` has references to all of its live obervers, and ```WeatherBoard``` also has reference to its publisher ```WeatherService```.
+  
+  Problem: Imagine an object changes its state ex: WeatheService, & another object for ex: WeatherBoard wants to know the status of weather from WeatherService. Here WeatherServer is observable or Publisher, and WeatherBoard is observer or subscriber. Observable has 0 or many Observers, and whenever the there is change of state Observer is notified. So in order to get updated on status of Observable, Observer needs to subscribe. 
+  
+![observer_pattern](https://user-images.githubusercontent.com/16775510/48675621-0f853080-eb53-11e8-85a0-565ebd701d7d.jpg)
