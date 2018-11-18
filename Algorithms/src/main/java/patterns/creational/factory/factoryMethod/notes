@@ -1,9 +1,0 @@
-- Factory method pattern uses factory methods to deal with the problem of creating objects
-    without having to specify the exact class of the object that will be created
-
-- this is done by creating objects by calling factory method - either specified in an interface and implemented by child classes,
-    or implemented in a base class and optionally overridden by derived classes instead of calling constructor
-
-- In this example createPizza on Pizzastore is abstract method which is implemented by child classes.
-
-- Problem this pattern is trying to solve is if you have multiple types pizza created by multiple pizza stores let them handle the creation
