@@ -62,3 +62,19 @@ This allows further abstracting creating objects, and is promoting "open/close" 
   Problem: Imagine an object changes its state ex: WeatheService, & another object for ex: WeatherBoard wants to know the status of weather from WeatherService. Here WeatherServer is observable or Publisher, and WeatherBoard is observer or subscriber. Observable has 0 or many Observers, and whenever the there is change of state Observer is notified. So in order to get updated on status of Observable, Observer needs to subscribe. 
   
 ![observer_pattern](https://user-images.githubusercontent.com/16775510/48675621-0f853080-eb53-11e8-85a0-565ebd701d7d.jpg)
+
+###Decorator
+Def: Pattern allows you to add behaviour dynamically at run-time to an object without affecting the behaviour of other objects in same class
+
+Problems that pattern solve
+ * Responsibilities should be added to (and removed from) an object dynamically at run-time
+ * A flexible alternative to subclassing for an extended functionality 
+ 
+ Solution that pattern describle
+  Define ```Decorator``` objects that 
+   * implement the interface of the extended (decorated)object (```Component```) trasnparently forwarding all the requests to it and 
+   * perform additional functionality before/after forwarding a request
+   ```Decorator``` now ```has a``` and also ```is a``` realation with the ```Component```. ```Decorator```can have ```Component``` or another ```Decorator```.
+   
+   ![decorator_pattern](https://user-images.githubusercontent.com/16775510/48702133-06926e80-ebe8-11e8-97ff-4dfb9b88f7a0.jpeg)
+   
