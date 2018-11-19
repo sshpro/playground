@@ -63,7 +63,7 @@ This allows further abstracting creating objects, and is promoting "open/close" 
   
 ![observer_pattern](https://user-images.githubusercontent.com/16775510/48675621-0f853080-eb53-11e8-85a0-565ebd701d7d.jpg)
 
-###Decorator
+### Decorator
 Def: Pattern allows you to add behaviour dynamically at run-time to an object without affecting the behaviour of other objects in same class
 
 Problems that pattern solve
